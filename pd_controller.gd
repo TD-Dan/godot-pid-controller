@@ -5,7 +5,7 @@ class_name PDController
 var setpoint = 0.0
 
 var Kp = 1.0
-var Kd = 1.0
+var Kd = 0.1
 
 var previous_error = 0.0
 
