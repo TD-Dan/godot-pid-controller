@@ -11,6 +11,17 @@ Derivative (D) term: It predicts the future trend of the error based on its rate
 
 ## How to use it in Godot?
 
+1. Copy pd_controller and/or pid_controller to your projectinto addons/godot-pid-controller folder
+2. setup your process loop:
+```
+var my_pid = PIDController.new()
+...
+func _process(delta):
+  my_pid.setpoint = desired_target_value
+  my_actual_value -= my_pid.step(my_actual_value, delta)
+```
+4. Tune your pid controller Ki, Kp and Kd values for your case
+
 Check out :
 https://github.com/TD-Dan/godot-pid-controller-examples
 
